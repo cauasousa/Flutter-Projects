@@ -2,6 +2,7 @@ import 'dart:convert';
 import 'package:http/http.dart' as http;
 
 var url = Uri.parse('YourKEY'); 
+var url = Uri.parse('http://api.hgbrasil.com/finance?key=f7d6b602'); 
 
 abstract class ConverterText {
   static var real, usd, eur, usdJson, eurJson = 0.0;

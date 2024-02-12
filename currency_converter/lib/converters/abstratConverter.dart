@@ -1,7 +1,7 @@
 import 'dart:convert';
 import 'package:http/http.dart' as http;
 
-var url = Uri.parse('yourKey'); 
+var url = Uri.parse('YourKEY'); 
 
 abstract class ConverterText {
   static var real, usd, eur, usdJson, eurJson = 0.0;

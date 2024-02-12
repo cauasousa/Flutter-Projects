@@ -1,16 +1,10 @@
-# currency_converter
+# Currency Converter
 
-A new Flutter project.
+---
+### *Developed using the API https://console.hgbrasil.com/documentation/finance*
+### *It is recommended to read this documentation, then put your key in the file currency_coverter/lib/converters/abstratConverter.dart, on line 4.*
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+# Conversor de Moedas
+--- 
+### Desenvolvido com o uso da API https://console.hgbrasil.com/documentation/finance
+### Recomenda-se ler esta documentação, então coloque a sua chave no arquivo currency_coverter/lib/converters/abstratConverter.dart, na linha 4.

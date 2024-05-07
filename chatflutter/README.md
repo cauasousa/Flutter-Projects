@@ -2,7 +2,7 @@
 
 A new Flutter chat project.
 
-##Instruction
+## Instruction
 
 Follow the instructions in the Firebase documentation. [Link -> https://firebase.google.com/docs]
 

@@ -7,6 +7,7 @@
 * Currency converter
 * Task List
 * Searching for Gifs
+* Virtual Store
 
 ## Projetos Desenvolvidos
 
@@ -15,3 +16,4 @@
 * Conversor de Moeda
 * Lista de Tarefa
 * Buscador de Gifs
+* Loja Virtual

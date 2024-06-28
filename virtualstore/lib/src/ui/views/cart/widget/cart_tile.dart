@@ -26,11 +26,7 @@ class CartTile extends StatelessWidget {
               alignment: Alignment.center,
             );
           } else {
-            print(snapshot.data);
-            print(snapshot.data!.id);
-            print("AQUI");
-            print(snapshot.data?.data());
-
+            
             product.product = Product.fromMap(snapshot.data!);
 
             return Row(
@@ -68,8 +64,10 @@ class CartTile extends StatelessWidget {
                         Text(
                           "R\$ ${product.product.price}",
                           style: TextStyle(
-                            fontWeight: FontWeight.w300,
+                            fontWeight: FontWeight.bold,
                             fontSize: 16.0,
+                            color: Theme.of(context).primaryColor,
+                            
                           ),
                         ),
                         Row(

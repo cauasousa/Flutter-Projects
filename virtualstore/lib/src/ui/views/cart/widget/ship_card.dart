@@ -6,6 +6,8 @@ class ShipCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
+      margin: EdgeInsets.symmetric(horizontal: 8.0, vertical: 4.0),
+
       child: ExpansionTile(
         title: Text(
           "Cupom de desconto",
@@ -14,27 +16,21 @@ class ShipCard extends StatelessWidget {
           Icons.location_on,
           color: Theme.of(context).primaryColor,
         ),
-        // trailing: Icon(
-        //   Icons.add,
-        //   color: Theme.of(context).primaryColor,
-        // ),
+        
         children: [
-          Padding(
-            padding: EdgeInsets.all(8),
-            child: TextFormField(
-              decoration: InputDecoration(
-                border: OutlineInputBorder(
-                  borderSide: BorderSide(color: Theme.of(context).primaryColor),
-                ),
-                focusedBorder: OutlineInputBorder(
-                    borderSide: BorderSide(
-                  color: Theme.of(context).primaryColor,
-                )),
-                hintText: "Digite seu cupom",
+          TextFormField(
+            decoration: InputDecoration(
+              border: OutlineInputBorder(
+                borderSide: BorderSide(color: Theme.of(context).primaryColor),
               ),
-              initialValue: "",
-              onFieldSubmitted: (value) {},
+              focusedBorder: OutlineInputBorder(
+                  borderSide: BorderSide(
+                color: Theme.of(context).primaryColor,
+              )),
+              hintText: "Digite seu CEP",
             ),
+            initialValue: "",
+            onFieldSubmitted: (value) {},
           ),
         ],
       ),

@@ -27,6 +27,8 @@ class CartTile extends StatelessWidget {
             );
           } else {
             
+            CardModel.of(context).updatePrice();
+
             product.product = Product.fromMap(snapshot.data!);
 
             return Row(
@@ -35,7 +37,7 @@ class CartTile extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Image.network(
-                    product.product.images[0],
+                    product.product?.images[0],
                     width: 120.0,
                     fit: BoxFit.cover,
                   ),
@@ -48,7 +50,7 @@ class CartTile extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
                         Text(
-                          product.product.title,
+                          product.product!.title,
                           style: TextStyle(
                             fontWeight: FontWeight.w900,
                             fontSize: 17.0,
@@ -62,7 +64,7 @@ class CartTile extends StatelessWidget {
                           ),
                         ),
                         Text(
-                          "R\$ ${product.product.price}",
+                          "R\$ ${product.product?.price}",
                           style: TextStyle(
                             fontWeight: FontWeight.bold,
                             fontSize: 16.0,

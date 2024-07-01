@@ -10,7 +10,7 @@ class ShipCard extends StatelessWidget {
 
       child: ExpansionTile(
         title: Text(
-          "Cupom de desconto",
+          "Calcular frete",
         ),
         leading: Icon(
           Icons.location_on,

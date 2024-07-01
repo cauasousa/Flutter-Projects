@@ -9,7 +9,7 @@ class CartProduct extends Model{
   late String cid, categoryUid, productUid;
   late String size;
   late int quantity;
-  late Product product;
+  Product ?product;
   
   static CartProduct of(BuildContext context) => ScopedModel.of<CartProduct>(context);
 
@@ -35,7 +35,7 @@ class CartProduct extends Model{
       
       "size" : size,
       "quantity" : quantity,
-      "uidProduct" : product.uidProduct,
+      "uidProduct" : product?.uidProduct,
       "categoryUid" : categoryUid,
       // "categoryUid" : product.categoryUid,
       // "product" : product.toResumeMap()

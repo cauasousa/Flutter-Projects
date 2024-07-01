@@ -38,7 +38,7 @@ class DiscountCard extends StatelessWidget {
               onFieldSubmitted: (value) {
                 FirebaseFirestore.instance
                     .collection("coupons")
-                    .doc(value)
+                    .doc(value != '' ? value : "?")
                     .get()
                     .then((docSnap) {
                   if (docSnap.exists) {

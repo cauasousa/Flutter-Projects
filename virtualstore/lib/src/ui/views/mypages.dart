@@ -3,6 +3,7 @@ import 'package:virtualstore/src/ui/views/cart/cart_screen.dart';
 import 'package:virtualstore/src/ui/views/category/pagecategory.dart';
 import 'package:virtualstore/src/ui/views/drawer/customdrawer.dart';
 import 'package:virtualstore/src/ui/views/home/home.dart';
+import 'package:virtualstore/src/ui/views/order/order_screen.dart';
 
 const Color colos1 = Color.fromRGBO(76, 62, 165, 1);
 const Color colos2 = Color.fromRGBO(14, 12, 63, 1);
@@ -35,7 +36,8 @@ class MyPages extends StatelessWidget {
             body: Container(),
           ),
         ),
-        // CartScreen(),
+        PageOrder(controller: _controller),
+
         
         
       ],

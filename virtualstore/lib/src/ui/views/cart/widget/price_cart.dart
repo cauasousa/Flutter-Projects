@@ -2,9 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:scoped_model/scoped_model.dart';
 import 'package:virtualstore/src/controllers/card_model.dart';
+import 'package:virtualstore/src/ui/views/cart/orderScreen.dart';
 
 class PriceCart extends StatelessWidget {
-  const PriceCart({super.key});
+  const PriceCart({super.key, required this.onPressed});
+
+  final void Function()? onPressed;
 
   @override
   Widget build(BuildContext context) {
@@ -81,7 +84,7 @@ class PriceCart extends StatelessWidget {
                 Container(
                   width: double.maxFinite,
                   child: ElevatedButton(
-                    onPressed: () {},
+                    onPressed: onPressed,
                     child: Text(
                       "Finalizar",
                       style: TextStyle(color: Colors.white),

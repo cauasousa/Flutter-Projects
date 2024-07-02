@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:scoped_model/scoped_model.dart';
 import 'package:virtualstore/src/controllers/card_model.dart';
 import 'package:virtualstore/src/controllers/user.dart';
+import 'package:virtualstore/src/ui/views/cart/orderScreen.dart';
 import 'package:virtualstore/src/ui/views/cart/widget/cart_body.dart';
 import 'package:virtualstore/src/ui/views/login/login_screen.dart';
 
@@ -91,11 +92,20 @@ class CartScreen extends StatelessWidget {
                     style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
                     textAlign: TextAlign.center,
                   ),
-
                 );
               } else {
-                return Cartbody();
-                
+                return Cartbody(onPressed: () async {
+                  String? idcart = await model.finishOrder();
+                  if (idcart != null) {
+                    print('Comprou Acertou************');
+
+                    Navigator.of(context).pushReplacement(
+                      MaterialPageRoute(
+                        builder: (context) => OrderScreen(id: idcart),
+                      ),
+                    );
+                  }
+                });
               }
             },
           ),

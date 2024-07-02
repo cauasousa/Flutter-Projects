@@ -7,7 +7,9 @@ import 'package:virtualstore/src/ui/views/cart/widget/price_cart.dart';
 import 'package:virtualstore/src/ui/views/cart/widget/ship_card.dart';
 
 class Cartbody extends StatelessWidget {
-  const Cartbody({super.key});
+  const Cartbody({super.key, required this.onPressed});
+  
+  final void Function()? onPressed;
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +27,7 @@ class Cartbody extends StatelessWidget {
         ),
         DiscountCard(),
         ShipCard(),
-        PriceCart(),
+        PriceCart(onPressed: onPressed),
       ],
     );
   }

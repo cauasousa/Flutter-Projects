@@ -1,6 +1,10 @@
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:virtualstore/src/controllers/user.dart';
 import 'package:virtualstore/src/ui/views/login/login_screen.dart';
+
+
 
 class BodyPageOrder extends StatelessWidget {
   const BodyPageOrder({super.key});
@@ -8,10 +12,15 @@ class BodyPageOrder extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     if (Users.of(context).isConnect()) {
+      String uid = Users.of(context).user!.uid;
 
+      return FutureBuilder(
+        future: ,
+        builder: (context, snapshot) {
+
+        },
+      );
       
-      return Container();
-
 
     } else {
       return Container(

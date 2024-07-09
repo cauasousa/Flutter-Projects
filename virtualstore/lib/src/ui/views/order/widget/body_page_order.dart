@@ -1,10 +1,8 @@
-import 'package:firebase_auth/firebase_auth.dart';
-import 'package:firebase_auth/firebase_auth.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:virtualstore/src/controllers/user.dart';
 import 'package:virtualstore/src/ui/views/login/login_screen.dart';
-
-
+import 'package:virtualstore/src/ui/views/order/widget/oder_tile.dart';
 
 class BodyPageOrder extends StatelessWidget {
   const BodyPageOrder({super.key});
@@ -14,14 +12,24 @@ class BodyPageOrder extends StatelessWidget {
     if (Users.of(context).isConnect()) {
       String uid = Users.of(context).user!.uid;
 
-      return FutureBuilder(
-        future: ,
+      return FutureBuilder<QuerySnapshot>(
+        future: FirebaseFirestore.instance
+            .collection('users')
+            .doc(uid)
+            .collection('orders')
+            .get(),
         builder: (context, snapshot) {
-
+          if (!snapshot.hasData) {
+            return Center(
+              child: CircularProgressIndicator(),
+            );
+          } else {
+            return ListView(
+              children: snapshot.data!.docs.map((e) => OrderTile(orderuid:  e.id)).toList(),
+            );
+          }
         },
       );
-      
-
     } else {
       return Container(
         padding: EdgeInsets.all(12),

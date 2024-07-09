@@ -4,6 +4,7 @@ import 'package:virtualstore/src/ui/views/category/pagecategory.dart';
 import 'package:virtualstore/src/ui/views/drawer/customdrawer.dart';
 import 'package:virtualstore/src/ui/views/home/home.dart';
 import 'package:virtualstore/src/ui/views/order/order_screen.dart';
+import 'package:virtualstore/src/ui/views/places/place_screen.dart';
 
 const Color colos1 = Color.fromRGBO(76, 62, 165, 1);
 const Color colos2 = Color.fromRGBO(14, 12, 63, 1);
@@ -24,22 +25,8 @@ class MyPages extends StatelessWidget {
       children: [
         PageHome(controller: _controller),
         PageCategory(controller: _controller),
-
-        SafeArea(
-          child: Scaffold(
-            drawer: WidgetCustomDrawer(controller: _controller, id: 2),
-            appBar: AppBar(
-              title: Text("Lojas"),
-              backgroundColor: Color(0xFF390D02),
-              centerTitle: true,
-            ),
-            body: Container(),
-          ),
-        ),
+        PlaceScreen(controller: _controller),
         PageOrder(controller: _controller),
-
-        
-        
       ],
     );
   }

@@ -38,7 +38,7 @@ class CartProduct extends Model{
       "uidProduct" : product?.uidProduct,
       "categoryUid" : categoryUid,
       // "categoryUid" : product.categoryUid,
-      // "product" : product.toResumeMap()
+      "product" : product?.toResumeMap()
     };
   }
 
